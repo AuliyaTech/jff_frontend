@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from "./components/Navigation"
+import FirstPage from "./pages/FirstPage"
+import About from "./pages/About"
+import Locations from "./pages/Locations"
+import Contact from "./pages/Contact"
+import ComingSoon from "./pages/ComingSoon"
+import Testimonials from "./pages/Testimonials"
+import Footer from "./components/Footer"
+import "./Brand.css"
 
-function App() {
+class App extends Component{
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+      <Navigation/>
+      <Router>
+        <Route exact path='/' component={FirstPage}/>
+        <Route exact path='/about' component={About}/>
+        <Route exact path='/locations' component={Locations}/>
+        <Route exact path='/contact' component={Contact}/>
+        <Route exact path='/testimonials' component={Testimonials} />
+        <Route exact path='/shop' component={ComingSoon}/>
+      </Router>
+      <Footer />
+  </div>
+  )
+}}
 
 export default App;
