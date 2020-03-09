@@ -54,7 +54,7 @@ class Testimonials extends Component {
                     return (
                         <Row>
                             <div classname="iframe-container p-c">
-                                <iframe width="560" height="315" src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315cd " src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </Row>
                     )
