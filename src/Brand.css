@@ -123,10 +123,12 @@
 
 
   /* position-centered */
-  .p-c{
-    margin-left: 50%;
-    margin-right: -50%;
+  div {
+      text-align: center;
   }
+  /* .p-c{
+    display: inline-block;
+  } */
 
   /* iframe */
   .iframe-container {
