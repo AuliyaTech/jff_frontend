@@ -1,34 +1,29 @@
 import React from 'react';
-import {Container, Row, Col} from "./Grid"
+import emailjs from 'emailjs-com';
 
+export default function ContactUs() {
 
-function Contact_Field() {
-    return(<div id="contact">
-        <Container>
-        <Row><p>We would love to hear from you...</p></Row>
-          <form className="contact-form s-lg p-c">
-            <Row>
-              <Col size="md-12">
-              <input type="text" placeholder="Your Name" id="contact-name"/>
-              </Col>
-            </Row>
-               <Row>
-                 <Col size="md-12">
-                 <input type="text" placeholder="Your Email" id="contact-email"/>
-                 </Col>
-              </Row>
-               <Row>
-                <Col size="md-9"><input type="text" placeholder="Write your comment here..." id="contact-comment" />
-                </Col>
-                <Col size="md-3"><input type="submit" id="contact-btn"/>
-                </Col>
-              </Row>
-            </form>
-        
-        </Container>
-        
+  function sendEmail(e) {
+    e.preventDefault();
 
-   </div> )
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+  return (
+    <form className="contact-form" onSubmit={sendEmail}>
+      <input type="hidden" name="contact_number" />
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
+  );
 }
-
-export default Contact_Field;
