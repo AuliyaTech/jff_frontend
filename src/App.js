@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from "./components/Navigation"
 import FirstPage from "./pages/FirstPage"
@@ -19,7 +19,7 @@ class App extends Component{
     <div className="App">
 
       <Navigation/>
-      <Router>
+      <Switch>
         <Route exact path='/' component={FirstPage}/>
         <Route exact path='/about' component={About}/>
         <Route exact path='/locations' component={Locations}/>
@@ -27,7 +27,7 @@ class App extends Component{
         <Route exact path='/testimonials' component={Testimonials} />
         <Route exact path='/shop' component={Shop}/>
       
-      </Router>
+      </Switch>
       <Footer />
   </div>
   )
