@@ -9,6 +9,7 @@ import Contact from "./pages/Contact"
 import ComingSoon from "./pages/ComingSoon"
 import Testimonials from "./pages/Testimonials"
 import Footer from "./components/Footer"
+import Shop from "./pages/Shop"
 import "./Brand.css"
 
 class App extends Component{
@@ -24,7 +25,8 @@ class App extends Component{
         <Route exact path='/locations' component={Locations}/>
         <Route exact path='/contact' component={Contact}/>
         <Route exact path='/testimonials' component={Testimonials} />
-        <Route exact path='/shop' component={ComingSoon}/>
+        <Route exact path='/shop' component={Shop}/>
+      
       </Router>
       <Footer />
   </div>

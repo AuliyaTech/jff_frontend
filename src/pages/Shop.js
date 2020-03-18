@@ -16,7 +16,7 @@ function Shop () {
 
     useEffect(()=>{
         const script = document.createElement("script");
-        script.src = "https://www.paypal.com/sdk/js?client-id=SB_CLIENT_ID";
+        script.src = "https://www.paypal.com/sdk/js?client-id=AcIKHHrW2UfkELyNwEJ3R9AEuGorUmHAPu08bN5_b507_qvnIC28QUDLObD1DL1ZnZ6MCtj9pwtkuZBh";
         script.addEventListener("load", () => setLoaded(true));
         document.body.appendChild(script);
         if (loaded){
