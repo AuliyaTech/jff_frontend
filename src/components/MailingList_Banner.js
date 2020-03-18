@@ -1,7 +1,8 @@
 import React, {Component} from "react"
 import {Container, Row, Col} from "./Grid"
 import img from "../utils/images/bg_know.png"
-import axios from 'axios';
+import API from "../utils/images/API"
+// import axios from 'axios';
 
 class MailingList_Banner extends Component {
 
@@ -19,18 +20,16 @@ class MailingList_Banner extends Component {
         const state = this.state;
         state[e.target.name] = e.target.value;
         this.setState(state);
-        console.log(this.state)
+        // console.log(this.state)
     }
 
-    onSubmit = e => {
+    handleSubmit = e => {
         e.persist();
-        const {firstName, email} = this.state;
-        axios
-        .post('/mailchimp/signup', {firstName, email})
-        .then(res => {
-            console.log(res)
-        })
+        // console.log(this.state)
+        API.MailChimpSignUp(this.state).then(res => console.log(res))
     }
+
+   
 
     render(){
       
@@ -46,7 +45,7 @@ class MailingList_Banner extends Component {
                             <input type="text" name="firstName"  onChange={this.onChange} placeholder="Your Name" />
                             <input type="text" name="email"  onChange={this.onChange} placeholder="Your Email" />
                         </form>
-                        <button type="submit" onClick={this.onSubmit} value="Submit">Submit</button>
+                        <button type="submit" onClick={this.handleSubmit} value="Submit">Submit</button>
                     </Col>
                 </Row>
             </Container>

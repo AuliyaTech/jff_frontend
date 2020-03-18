@@ -6,12 +6,13 @@
     "npm": "6.4.1"
   },
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3010",
   "dependencies": {
     "@kentico/kontent-delivery": "^9.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "emailjs-com": "^2.4.1",
     "prismic-javascript": "^2.1.5",
@@ -44,5 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "http://jiajamfit.herokuapp.com"
 }
