@@ -54,7 +54,7 @@ class Testimonial_Banner extends Component {
                 if (t.testimonial_type.value[0].name === "video"){
                     return (
                         <Col size="md-4">
-                            <iframe width="80%" height="80%" src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe key={t.youtube_url.value} width="80%" height="80%" src={t.youtube_url.value} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </Col>
                     )
                 }
@@ -68,7 +68,7 @@ class Testimonial_Banner extends Component {
                 else if (t.testimonial_type.value[0].name === "screenshot"){
                     return (
                         <Col size="md-4">
-                            <img src={t.screenshot.value[0].asset}/>
+                            <img key={t.screenshot.value[0].asset} src={t.screenshot.value[0].asset}/>
                         </Col>
                     )                
                 }

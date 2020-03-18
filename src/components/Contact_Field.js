@@ -1,21 +1,22 @@
 import React from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
 export default function ContactUs() {
 
-  // function sendEmail(e) {
-  //   e.preventDefault();
+  function sendEmail(e) {
+    e.preventDefault();
+    console.log(e.target)
 
-  //   emailjs.sendForm('jjfsquad_gmail_com', 'YOUR_TEMPLATE_ID', e.target, 'user_OELfxfrUXstpXtD3RJaG0')
-  //     .then((result) => {
-  //         console.log(result.text);
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
-  // }
+    emailjs.sendForm('jjfsquad_gmail_com', 'jiajamfit', e.target, 'user_OELfxfrUXstpXtD3RJaG0')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
 
   return (
-    <form className="contact-form" /*onSubmit={sendEmail}*/>
+    <form className="contact-form" onSubmit={sendEmail}>
       <input type="hidden" name="contact_number" />
       <label>Name</label>
       <input type="text" name="user_name" />
