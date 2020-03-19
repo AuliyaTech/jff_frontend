@@ -9,14 +9,14 @@ function Shop () {
     let paypalRef = useRef();
 
     const product = {
-        price: 100.00,
+        price: 0.01,
         description: "8 weeks fitness membership",
         img: logo_img
     }
 
     useEffect(()=>{
         const script = document.createElement("script");
-        script.src = "https://www.paypal.com/sdk/js?client-id=AcIKHHrW2UfkELyNwEJ3R9AEuGorUmHAPu08bN5_b507_qvnIC28QUDLObD1DL1ZnZ6MCtj9pwtkuZBh";
+        script.src = "https://www.paypal.com/sdk/js?client-id=AVdY_YLZXBMb0FEIR-_3C5W9geW_90ntD3csk9RlRf5LnRcWLo4Key2K9hr9hS_JUM5Q49L9Bmpplyxk";
         script.addEventListener("load", () => setLoaded(true));
         document.body.appendChild(script);
         if (loaded){
