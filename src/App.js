@@ -15,24 +15,20 @@ import "./Brand.css"
 class App extends Component{
 
   render(){
-    const App = () =>(
-      <Switch>
-      <Route exact path='/' component={FirstPage}/>
-      <Route exact path='/about' component={About}/>
-      <Route exact path='/locations' component={Locations}/>
-      <Route exact path='/contact' component={Contact}/>
-      <Route exact path='/testimonials' component={Testimonials} />
-      <Route exact path='/shop' component={Shop}/>
-    
-    </Switch>
-    )
   return (
     <div className="App">
 
       <Navigation/>
-      <Switch>
-        <App />
-      </Switch>
+      <Switch basename="/">
+        <div>
+          <Route exact path='/' component={FirstPage}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/locations' component={Locations}/>
+          <Route exact path='/contact' component={Contact}/>
+          <Route exact path='/testimonials' component={Testimonials} />
+          <Route exact path='/shop' component={Shop}/>
+        </div>
+    </Switch>
       <Footer />
   </div>
   )
