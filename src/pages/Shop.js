@@ -28,7 +28,7 @@ function Shop () {
                             purchase_units: [{
                                 description: product.description,
                                 amount: {
-                                    currency_code: "CAD",
+                                    currency: "CAD", 
                                     value: product.price
                                 }
                             }]
@@ -56,6 +56,7 @@ function Shop () {
                     </div>
                 ):(
                     <div>
+                        <img src={product.img} />
                         <h1>{product.description} for ${product.price}</h1>
                         <div ref={v => (paypalRef = v)} />
                     </div>
