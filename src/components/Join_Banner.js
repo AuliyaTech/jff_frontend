@@ -14,10 +14,10 @@ class Join_Banner extends Component {
                  <Container>
             <Row>
                 <Col size="md-4">
-                    <p className="s-sm">A unique ladies only fitness class where you can JAM to your favourite tunes while getting fit! </p>
+                    <p className="s-sm, pad-30">A unique ladies only fitness class where you can JAM to your favourite tunes while getting fit! </p>
                 </Col>
                 <Col size="md-4">
-                    <img className="s-sm" src={diamonds}/>
+                    <img width="250px" className="pad-20 d-none d-md-block" src={diamonds}/>
                 </Col>
                 <Col size="md-4">
                     <img className="s-sm" src={join}/>

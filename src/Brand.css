@@ -3,7 +3,7 @@
 /*brand font-sizing */
 :root{
   --fs-lg: 60px; /* font-size-large */
-  --fs-md: 40px; /* font-size-large */
+  --fs-md: 30px; /* font-size-large */
   --fs-sm: 20px; /* font-size-large */
   --fs-xs: 5px; /* font-size-large*/
   
@@ -26,7 +26,7 @@
   }
   
   /* ---------- Sizing ---------- */
-  
+
   /* size-icon */
   .s-i{
   width: 25px;
@@ -48,6 +48,20 @@
   .s-lg{
   width: 950px;
   height: auto;
+  }
+
+  /* padding */ 
+  .pad-30{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .pad-20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .pad-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   /* Backgrounds */
@@ -88,39 +102,71 @@
       opacity: 50%;
   }
   
+  .header-img-container {
+margin: auto;
+  }
+
   /* Borders */
   .circle{
       border-radius: 50%;
   }
   
   .curved-ends{
-      border-radius: 25%;
+      border-radius: 10%;
+      border-style: none;
   }
   
   /* Positioning */
 
+  /* Headings */
+  h2 {
+    font-family: var(--main-text);
+    color: var(--c-q);
+    font-size: var(--fs-lg);
+  }
 
   /* Styling Specifics */
-
+  .logo {
+    margin-left:80px;
+  }
   .App{
       background-color: var(--c-p);
   }
-  .navigation-bar, #join_banner, #contact{
+  .navigation-bar{
+    background-color: var(--c-s);
+    color: var(--c-t);
+    font-family: var(--accent-text);
+    font-size: var(--fs-sm);
+    font-weight: bold;
+}
+.navigation-text {
+    padding-top: 20px;
+}
+  #join_banner, #contact {
       background-color: var(--c-s);
       color: var(--c-t);
       font-family: var(--accent-text);
-      font-size: var(--fs-sm);
+      font-size: var(--fs-md);
+      line-height: 2rem;
+  }
+  .mailingform {
+    vertical-align: middle;
+    height: auto;
+    margin-top: 80px;
   }
   #mailinglist_banner, #footer{
       background-color: var(--c-t);
+      color: var(--c-5);
+      font-family: var(--accent-text);
+      font-size: var(--fs-sm);
   }
   #genre_banner{
       background-color: var(--c-q);
+      background-image: url("./utils/images/bg_music.png");
   }
   #testimonial_banner{
       background-color: var(--c-5);
   }
-
 
   /* position-centered */
   div {
@@ -157,3 +203,10 @@
   }
   
   }
+
+  @media screen and (max-width: 400px) {
+    .diamonds {
+      visibility: hidden;
+      clear: both;
+    }
+}

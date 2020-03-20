@@ -11,8 +11,8 @@ function FirstPage(){
         <div>
             <Header_Banner />
             <Join_Banner />
-            <MailingList_Banner />
             <Genre_Banner />
+            <MailingList_Banner />
             <Testimonials_Banner />
             <Contact_Field/>
         </div>

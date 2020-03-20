@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Row} from "./Grid";
+import Image from 'react-bootstrap/Image';
 import img from "../utils/images/dancegirl.png"
 
 
@@ -8,9 +9,9 @@ function Header_Banner() {
         <div id="header_banner">
             <Container>
                 <Row>
-                    <div className="header-img-container">
-                        <img className="s-lg p-c" src={img}/>
-                    </div>
+              <div className="header-img-container">
+                <Image className="s-lg p-c" src={img} fluid />
+                </div>
                 </Row>
             </Container>
 

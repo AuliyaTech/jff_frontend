@@ -81,8 +81,11 @@ class Testimonial_Banner extends Component {
 
 
         return(
-            <div id="testimonial_banner">
+            <div id="testimonial_banner" className="pad-20">
             <Container>
+                <Row>
+                <h2>From Our Squad...</h2>
+                </Row>
                 <Row>
                     {display_testimonials}
                 </Row>
