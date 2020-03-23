@@ -53,24 +53,25 @@ class Testimonials extends Component {
             display_testimonials = this.state.testimonials.map(t => {
                 if (t.testimonial_type.value[0].name === "video"){
                     return (
-                            <Col size="md-6">
+                            <Col size="md-12">
                                 <div className="test-card">
                                     <p> Here's what {t.name.value} says</p>
-                                <iframe width="100%" height="300" src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="80%" height="400" src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
+                                <br/>
                             </Col>
                     )
                 }
                 else if (t.testimonial_type.value[0].name ==="written"){
                     return(
-                        <Col size="md-6">
+                        <Col size="md-12">
                             <div className="test-card" key={t.system.id} dangerouslySetInnerHTML={{__html: t.written_testimonial.value}}/>
                         </Col>
                     )
                 }
                 else if (t.testimonial_type.value[0].name === "screenshot"){
                     return (
-                        <Col size="md-6">
+                        <Col size="md-12">
                             <img className="test-card" src={t.screenshot.value[0].asset}/>
                         </Col>
                     )                

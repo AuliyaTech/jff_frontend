@@ -32,14 +32,14 @@ class ContactUs extends Component {
           <Row>
             <h1 className="page-title">We'd Love to Hear from You..</h1>
           </Row>
-
+          {/* <Row> */}
           <Form onSubmit={() => this.sendEmail()}>
 
             <Form.Group as={Row} controlId="formPlaintextFName">
               <Form.Label column md={2} xs={12}>
                 <div className="know-input">First Name:</div>
               </Form.Label>
-              <Col size="8">
+              <Col size="10">
                 <Form.Control name="user_name"/>
               </Col>
             </Form.Group>
@@ -48,7 +48,7 @@ class ContactUs extends Component {
               <Form.Label column md={2} xs={12}>
               <div className="know-input">Email:</div>
               </Form.Label>
-              <Col size="8">
+              <Col size="10">
                 <Form.Control name="user_email"/>
               </Col>
             </Form.Group>
@@ -57,16 +57,18 @@ class ContactUs extends Component {
               <Form.Label column md={2} xs={12}>
               <div className="know-input">Message:</div>
               </Form.Label>
-              <Col size="8">
+              <Col size="10">
                 <Form.Control as="textarea" rows={3} name="message"/>
               </Col>
             </Form.Group>
 
-            <Button variant="light" type="submit" className="float-right mr-5">
+            <Button type="submit" className="float-right" >
               Submit
             </Button> 
-            
+
           </Form>
+
+          {/* </Row> */}
         </Container>
       
       </div>

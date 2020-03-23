@@ -21,7 +21,7 @@ const Navigation = () =>{
                           <Nav.Link className="pad-20" href="/about">ABOUT</Nav.Link>
                           <Nav.Link className="pad-20" href="/testimonials">TESTIMONIALS</Nav.Link>
                           <Nav.Link className="pad-20" href="/locations">LOCATION</Nav.Link>
-                          <Nav.Link className="pad-20" href="/contacts">CONTACT</Nav.Link>
+                          <Nav.Link className="pad-20" href="/contact">CONTACT</Nav.Link>
                           
                       </Nav>
                   </Navbar.Collapse>

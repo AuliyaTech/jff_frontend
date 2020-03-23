@@ -41,36 +41,39 @@ class MailingList_Banner extends Component {
            
 <Container>  
     <Row>
-        <Col size="6">
+        <Col size="md-6">
         <Image className="s-lg p-c" src={img} fluid />
         </Col>
-        <Col size="6" className="pad-10">
-            
-<Form>
-  <Form.Group as={Row} controlId="formPlaintextFName">
-    <Form.Label column md={3} xs={12}>
-      <div className="know-input">First Name:</div>
-    </Form.Label>
-    <Col size="8">
-      <Form.Control name="firstName" onChange={this.onChange}/>
-    </Col>
-  </Form.Group>
+        <Col size="md-6" className="pad-10"> 
 
-  <Form.Group as={Row} controlId="formPlaintextEmail">
-    <Form.Label column md={3} xs={12}>
-    <div className="know-input">Email:</div>
-    </Form.Label>
-    <Col size="8">
-      <Form.Control name="email" onChange={this.onChange}/>
-    </Col>
-  </Form.Group>
-  <Button variant="light" type="submit" className="float-right mr-5" onClick={this.handleSubmit}>
-    Submit
-  </Button>
-</Form>
-</Col>
-</Row>
-</Container>  
+          <Form>
+
+            <Form.Group as={Row} controlId="formPlaintextFName">
+              <Form.Label column md={3} xs={12}>
+                <div className="know-input">First Name:</div>
+              </Form.Label>
+              <Col size="9">
+                <Form.Control name="firstName" onChange={this.onChange}/>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formPlaintextEmail">
+              <Form.Label column md={3} xs={12}>
+              <div className="know-input">Email:</div>
+              </Form.Label>
+              <Col size="9">
+                <Form.Control name="email" onChange={this.onChange}/>
+              </Col>
+            </Form.Group>
+
+            <Button type="submit" className="float-right" onClick={this.handleSubmit}>
+              Submit
+            </Button>
+
+          </Form>
+      </Col>
+    </Row>
+  </Container>  
 </div>
     
     )

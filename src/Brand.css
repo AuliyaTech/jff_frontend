@@ -161,6 +161,9 @@
       font-family: var(--accent-text);
       font-size: var(--fs-sm);
   }
+  #mailinglist_banner{
+    padding-bottom: 2%;
+  }
   #genre_banner{
       background-color: var(--c-q);
       background-image: url("./utils/images/bg_music.png");
@@ -181,16 +184,20 @@
     font-size: var(--fs-md);
     font-weight: 600;
   }
-  #testimonials, #locations{
+  #testimonials, #locations, #contact{
     background-color: var(--c-s);
+    border-radius: 20%;
     font-family: var(--accent-text);
-    color: var(--c-t);
-    padding: 2%;
+    color: var(--c-p);
+    padding: 10%;
     text-align: center;
     margin: 2%;
   }
   #testimonials p, #locations p{
     font-size: var(--fs-sm);
+  }
+  #locations h1{
+    font-weight: bolder;
   }
 
   #footer{
@@ -204,24 +211,54 @@
   }
   .contact-form{
     font-family: var(--accent-text);
-    padding-bottom: 5%;
+    padding-bottom: 10%;
+    background-color: var(--c-s);
+    color: var(--c-p);
+    font-size: var(--fs-sm);
+  }
+  .contact-form h1{
+    color: var(--c-p);
+    font-family: var(--accent-text);
   }
 
-  .test-card{
+  /* .test-card{
     box-shadow: 3px 3px 5px var(--c-t) ;
     padding: 10px;
     margin: 10px;
+  } */
 
+  button, .btn, .btn-primary{
+    font-family: var(--main-text);
+    color: var(--c-s);
+    background-color:var(--c-p);
+    border-radius: 50%;
+    border: solid 1px var(--c-s);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .btn-primary:hover{
+    background-color: var(--c-s);
+    border: 1px solid var(--c-p);
+    color: var(--c-p);
+  }
+  
+  input {
+    margin-bottom: 5px;
+  }
+  
+  form{
+    margin: 7%;
   }
 
   /* position-centered */
   .center {
-      text-align: center;
-      vertical-align: middle;
+      margin-left: auto;
+      margin-right: auto;
   }
   .p-c{
     margin-top: -30px;
   } 
+
 
   /* iframe */
   .iframe-container {
