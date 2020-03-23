@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import {Container, Row, Col} from "./Grid"
 import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button"
 import img from "../utils/images/bg_know.png"
 import API from "../utils/images/API"
 // import axios from 'axios';
@@ -51,7 +52,7 @@ class MailingList_Banner extends Component {
       <div className="know-input">First Name:</div>
     </Form.Label>
     <Col size="8">
-      <Form.Control/>
+      <Form.Control name="firstName" onChange={this.onChange}/>
     </Col>
   </Form.Group>
 
@@ -60,9 +61,12 @@ class MailingList_Banner extends Component {
     <div className="know-input">Email:</div>
     </Form.Label>
     <Col size="8">
-      <Form.Control/>
+      <Form.Control name="email" onChange={this.onChange}/>
     </Col>
   </Form.Group>
+  <Button variant="light" type="submit" className="float-right mr-5" onClick={this.handleSubmit}>
+    Submit
+  </Button>
 </Form>
 </Col>
 </Row>

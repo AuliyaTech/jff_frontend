@@ -1,28 +1,32 @@
 import React from "react"
 import API from "../utils/images/API"
-import {Row, Col} from "../components/Grid"
+import {Container, Row, Col} from "../components/Grid"
 
 function Location(){
     const locations = API.locations;
     const diplay_locations =  locations.map( l => {
         return(
-            <Row key={l.id}>
-            <Col size="md-6">
-            <iframe src={l.google_maps} width="500" height="450" frameBorder="0"  allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
-            </Col>
-            <Col size="md-6">
+            <Col size="md-4">
+                <div>
+                <iframe src={l.google_maps} width="100%" height="300" frameBorder="0"  allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
                 <h1>{l.name}</h1>
                 <p>{l.streetname}</p>
                 <p>{l.city}</p>
                 <p>{l.postal}</p>
-            </Col>     
-        </Row>
+                </div>
+            </Col>    
         )
     })
     return (
-        <div>
-            {diplay_locations}
-        </div>
+        <Container>
+            <h2 className="page-title">Our Locations...</h2>
+            <div id="locations">
+                <Row>
+                    {diplay_locations}
+                </Row>
+            </div>
+            
+        </Container>
     )
 }
 

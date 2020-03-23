@@ -45,6 +45,7 @@ class Testimonials extends Component {
     }
     
     render() {
+        console.log(this.state.testimonials)
 
         let display_testimonials; 
 
@@ -52,25 +53,26 @@ class Testimonials extends Component {
             display_testimonials = this.state.testimonials.map(t => {
                 if (t.testimonial_type.value[0].name === "video"){
                     return (
-                        <Row>
-                            <div classname="iframe-container p-c">
-                                <iframe width="560" height="315cd " src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </Row>
+                            <Col size="md-6">
+                                <div className="test-card">
+                                    <p> Here's what {t.name.value} says</p>
+                                <iframe width="100%" height="300" src={t.youtube_url.value} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </Col>
                     )
                 }
                 else if (t.testimonial_type.value[0].name ==="written"){
                     return(
-                        <Row>
-                            <div key={t.system.id} dangerouslySetInnerHTML={{__html: t.written_testimonial.value}}/>
-                        </Row>
+                        <Col size="md-6">
+                            <div className="test-card" key={t.system.id} dangerouslySetInnerHTML={{__html: t.written_testimonial.value}}/>
+                        </Col>
                     )
                 }
                 else if (t.testimonial_type.value[0].name === "screenshot"){
                     return (
-                        <Row>
-                            <img src={t.screenshot.value[0].asset}/>
-                        </Row>
+                        <Col size="md-6">
+                            <img className="test-card" src={t.screenshot.value[0].asset}/>
+                        </Col>
                     )                
                 }
             })
@@ -82,11 +84,14 @@ class Testimonials extends Component {
 
 
         return(
-            <div id="testimonial_banner">
             <Container>
-                    {display_testimonials}
+                <h1 className="page-title">From Our Squad...</h1>
+                <div id="testimonials">
+                    <Row>
+                        {display_testimonials}
+                    </Row>
+                    </div>
             </Container>
-            </div>
         )
     }
 }

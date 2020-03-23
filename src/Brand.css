@@ -101,11 +101,6 @@
       background-repeat: no-repeat; 
       opacity: 50%;
   }
-  
-  header-img-container {
-
-  }
-
   /* Borders */
   .circle{
       border-radius: 50%;
@@ -146,13 +141,14 @@
 .navigation-text {
     padding-top: 20px;
 }
-  #join_banner, #contact {
+  #join_banner, #contact{
       background-color: var(--c-s);
       color: var(--c-t);
       font-family: var(--accent-text);
       font-size: var(--fs-md);
       line-height: 2rem;
   }
+
   .mailingform {
     padding-top: 80px;
   }
@@ -175,6 +171,42 @@
   .know-input{
     text-align: left;
   }
+  .page-title{
+    font-family: var(--main-text);
+    color: var(--c-s);
+    text-align: center;
+    padding-top: 2%;
+    font-size: var(--fs-md);
+    font-weight: 600;
+  }
+  #testimonials, #locations{
+    background-color: var(--c-s);
+    font-family: var(--accent-text);
+    color: var(--c-t);
+    padding: 2%;
+    text-align: center;
+    margin: 2%;
+  }
+  #testimonials p, #locations p{
+    font-size: var(--fs-sm);
+  }
+
+  #footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /* margin-top: 20%; */
+    overflow: hidden;
+  }
+
+  .test-card{
+    box-shadow: 3px 3px 5px var(--c-t) ;
+    padding: 10px;
+    margin: 10px;
+
+  }
 
   /* position-centered */
   .center {
@@ -184,7 +216,6 @@
   .p-c{
     margin-top: -30px;
   } 
-
 
   /* iframe */
   .iframe-container {
