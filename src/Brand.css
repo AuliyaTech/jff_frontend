@@ -164,6 +164,8 @@
   #genre_banner{
       background-color: var(--c-q);
       background-image: url("./utils/images/bg_music.png");
+      text-align: center;
+    display: block;
   }
   #testimonial_banner{
       background-color: var(--c-5);
