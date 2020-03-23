@@ -36,32 +36,38 @@ class MailingList_Banner extends Component {
     render(){
       
     return (
-        <div id="mailinglist_banner">
+<div id="mailinglist_banner">
            
-      <Container>   
-<Row>
-    <Col size="md-6">
-    <Image className="pad-20" src={img} fluid />
-    </Col>
-    <Col size="md-6">
-        <div className="mailingform">
-        <Row>
-            <Col size="md-3">Name:</Col>
-            <Col size="md-6">
-            <Form.Control type="firstName" placeholder="Enter name" />
-            </Col>
-        </Row>
-        <Row>
-        <Col size="md-3">Email:</Col>
-        <Col size="md-6">
-        <Form.Control type="email" placeholder="Enter email" />
+<Container>  
+    <Row>
+        <Col size="6">
+        <Image className="s-lg p-c" src={img} fluid />
         </Col>
-        </Row>
-        </div>
+        <Col size="6" className="pad-10">
+            
+<Form>
+  <Form.Group as={Row} controlId="formPlaintextFName">
+    <Form.Label column md={3} xs={12}>
+      <div className="know-input">First Name:</div>
+    </Form.Label>
+    <Col size="8">
+      <Form.Control/>
     </Col>
+  </Form.Group>
+
+  <Form.Group as={Row} controlId="formPlaintextEmail">
+    <Form.Label column md={3} xs={12}>
+    <div className="know-input">Email:</div>
+    </Form.Label>
+    <Col size="8">
+      <Form.Control/>
+    </Col>
+  </Form.Group>
+</Form>
+</Col>
 </Row>
 </Container>  
-        </div>
+</div>
     
     )
     }

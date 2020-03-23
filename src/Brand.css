@@ -102,8 +102,8 @@
       opacity: 50%;
   }
   
-  .header-img-container {
-margin: auto;
+  header-img-container {
+
   }
 
   /* Borders */
@@ -117,6 +117,10 @@ margin: auto;
   }
   
   /* Positioning */
+  .align-middle{
+    display: block;
+    vertical-align: middle;
+  }
 
   /* Headings */
   h2 {
@@ -150,9 +154,10 @@ margin: auto;
       line-height: 2rem;
   }
   .mailingform {
-    vertical-align: middle;
-    height: auto;
-    margin-top: 80px;
+    padding-top: 80px;
+  }
+  #header_banner {
+    margin-bottom:-30px;
   }
   #mailinglist_banner, #footer{
       background-color: var(--c-t);
@@ -167,14 +172,19 @@ margin: auto;
   #testimonial_banner{
       background-color: var(--c-5);
   }
+  .know-input{
+    text-align: left;
+  }
 
   /* position-centered */
-  div {
+  .center {
       text-align: center;
+      vertical-align: middle;
   }
-  /* .p-c{
-    display: inline-block;
-  } */
+  .p-c{
+    margin-top: -30px;
+  } 
+
 
   /* iframe */
   .iframe-container {
@@ -208,5 +218,8 @@ margin: auto;
     .diamonds {
       visibility: hidden;
       clear: both;
+    }
+    .mailingform {
+      padding-top: 0px !important;
     }
 }

@@ -7,9 +7,8 @@ import Contact_Field from "./Contact_Field";
 const Genre_Banner = () => {
     return(
         <div id="genre_banner" className="pad-30">
-            <Container>
                 <Image className="s-lg" src={img} fluid />
-            </Container>
+        
         </div>
     )
 

@@ -10,7 +10,7 @@ function Header_Banner() {
             <Container>
                 <Row>
               <div className="header-img-container">
-                <Image className="s-lg p-c" src={img} fluid />
+                <Image className="s-lg" src={img} fluid />
                 </div>
                 </Row>
             </Container>

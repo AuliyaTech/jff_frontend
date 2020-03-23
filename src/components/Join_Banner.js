@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {Container, Row, Col} from "./Grid"
+import Image from 'react-bootstrap/Image';
 import diamonds from "../utils/images/diamonds.png";
 import join from "../utils/images/bg_join.png"
 import axios from "axios";
@@ -20,7 +21,7 @@ class Join_Banner extends Component {
                     <img width="250px" className="pad-20 d-none d-md-block" src={diamonds}/>
                 </Col>
                 <Col size="md-4">
-                    <img className="s-sm" src={join}/>
+                    <Image className="s-sm" src={join} fluid />
                 </Col>
             </Row>
         </Container>
