@@ -186,7 +186,7 @@
   }
   #testimonials, #locations, #contact{
     background-color: var(--c-s);
-    border-radius: 20%;
+    border-radius: 10px;
     font-family: var(--accent-text);
     color: var(--c-p);
     padding: 10%;
