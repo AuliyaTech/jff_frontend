@@ -3,6 +3,12 @@ import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button"
 import {Container, Row, Col} from "./Grid"
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from "react-google-recaptcha";
+
+function onChange(value) {
+  console.log("Captcha value:", value);
+}
+
 
 class ContactUs extends Component {
   constructor(props){
@@ -15,6 +21,10 @@ class ContactUs extends Component {
 
   sendEmail(e) {
     e.preventDefault()
+  
+
+    // const recaptchaValue = recaptchaRef.current.getValue();
+    // this.props.onSubmit(recaptchaValue);
 
     emailjs.sendForm('jjfsquad_gmail_com', 'jiajamfit', e.target, 'user_OELfxfrUXstpXtD3RJaG0')
       .then((result) => {
@@ -32,10 +42,10 @@ class ContactUs extends Component {
           <Row>
             <h1 className="page-title">We'd Love to Hear from You..</h1>
           </Row>
-          {/* <Row> */}
-          <Form onSubmit={() => this.sendEmail()}>
 
-            <Form.Group as={Row} controlId="formPlaintextFName">
+          <Form onSubmit={(e) => this.sendEmail(e)} >
+
+          <Form.Group as={Row} controlId="formPlaintextFName">
               <Form.Label column md={2} xs={12}>
                 <div className="know-input">First Name:</div>
               </Form.Label>
@@ -62,13 +72,12 @@ class ContactUs extends Component {
               </Col>
             </Form.Group>
 
-            <Button type="submit" className="float-right" >
-              Submit
-            </Button> 
+            <ReCAPTCHA sitekey="6LfLg_cUAAAAALEwJ_qahVo3QSdD-eqcBMp6SSuc" onChange={onChange} />
+
+            <input className="float-right circle-btn" type="submit" value="Submit" />
 
           </Form>
 
-          {/* </Row> */}
         </Container>
       
       </div>

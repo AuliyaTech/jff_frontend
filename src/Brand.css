@@ -184,7 +184,7 @@
     font-size: var(--fs-md);
     font-weight: 600;
   }
-  #testimonials, #locations, #contact{
+  #about, #testimonials, #locations, #contact{
     background-color: var(--c-s);
     border-radius: 10px;
     font-family: var(--accent-text);
@@ -227,7 +227,7 @@
     margin: 10px;
   } */
 
-  button, .btn, .btn-primary{
+  button, .btn, .btn-primary, .circle-btn{
     font-family: var(--main-text);
     color: var(--c-s);
     background-color:var(--c-p);
@@ -274,6 +274,16 @@
       left: 0;
       width: 100%;
       height: 100%
+  }
+
+#about img {
+    width: 100%;
+    height: auto;
+  }
+
+  #about p {
+    font-size: var(--fs-sm);
+    color: var(--c-q)
   }
 
   @media screen and (max-width: 600px){
