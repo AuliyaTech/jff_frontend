@@ -28,12 +28,18 @@ class ContactUs extends Component {
       }, (error) => {
           console.log(error.text);
       });
-
-    this.setState({status: x})
   }
+
+
   render(){
-    return (
-      <div className="contact-form">
+
+    let displayContactForm;
+
+    if (this.status){
+      displayContactForm = <h2> Your Message Was Sent! </h2>
+    }
+    else{
+      displayContactForm = <div>
         <Container>
           <Row>
             <h1 className="page-title">We'd Love to Hear from You..</h1>
@@ -73,8 +79,54 @@ class ContactUs extends Component {
             <input className="float-right circle-btn" type="submit" value="Submit" />
 
           </Form>
+          </Container>
+      </div>
+    }
 
-        </Container>
+    return (
+      <div className="contact-form">
+        {displayContactForm}
+        {/* <Container>
+          <Row>
+            <h1 className="page-title">We'd Love to Hear from You..</h1>
+          </Row>
+
+          <Form onSubmit={(e) => this.sendEmail(e)} >
+
+          <Form.Group as={Row} controlId="formPlaintextFName">
+              <Form.Label column md={2} xs={12}>
+                <div className="know-input">First Name:</div>
+              </Form.Label>
+              <Col size="10">
+                <Form.Control name="user_name"/>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formPlaintextEmail">
+              <Form.Label column md={2} xs={12}>
+              <div className="know-input">Email:</div>
+              </Form.Label>
+              <Col size="10">
+                <Form.Control name="user_email"/>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="formPlaintextEmail">
+              <Form.Label column md={2} xs={12}>
+              <div className="know-input">Message:</div>
+              </Form.Label>
+              <Col size="10">
+                <Form.Control as="textarea" rows={3} name="message"/>
+              </Col>
+            </Form.Group>
+
+            <ReCAPTCHA sitekey="6LfLg_cUAAAAALEwJ_qahVo3QSdD-eqcBMp6SSuc" onChange={onChange} />
+
+            <input className="float-right circle-btn" type="submit" value="Submit" />
+
+          </Form>
+
+        </Container> */}
       
       </div>
     );
