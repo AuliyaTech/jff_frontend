@@ -21,10 +21,6 @@ class ContactUs extends Component {
 
   sendEmail(e) {
     e.preventDefault()
-  
-
-    // const recaptchaValue = recaptchaRef.current.getValue();
-    // this.props.onSubmit(recaptchaValue);
 
     emailjs.sendForm('jjfsquad_gmail_com', 'jiajamfit', e.target, 'user_OELfxfrUXstpXtD3RJaG0')
       .then((result) => {
@@ -33,7 +29,7 @@ class ContactUs extends Component {
           console.log(error.text);
       });
 
-      // this.setState({status: x})
+    this.setState({status: x})
   }
   render(){
     return (
