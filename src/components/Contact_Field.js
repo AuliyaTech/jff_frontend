@@ -15,7 +15,8 @@ class ContactUs extends Component {
     super(props);
 
     this.state={
-        status: null
+        status: null,
+        sent: false
     }
 }
 
@@ -24,10 +25,12 @@ class ContactUs extends Component {
 
     emailjs.sendForm('jjfsquad_gmail_com', 'jiajamfit', e.target, 'user_OELfxfrUXstpXtD3RJaG0')
       .then((result) => {
+        console.log(result)
           this.setState({ status: 200 })
       }, (error) => {
           console.log(error.text);
       });
+      this.setState({ sent: true })
   }
 
 
@@ -35,7 +38,7 @@ class ContactUs extends Component {
 
     let displayContactForm;
 
-    if (this.status){
+    if (this.state.status){
       displayContactForm = <h2> Your Message Was Sent! </h2>
     }
     else{
